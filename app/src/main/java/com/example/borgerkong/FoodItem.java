@@ -2,7 +2,7 @@ package com.example.borgerkong;
 
 public class FoodItem {
     //unique identifier
-   // private int foodID;
+    private int foodID;
 
     //name of burger
     private String foodName;
@@ -10,14 +10,18 @@ public class FoodItem {
     private String price;
     //content
     private String content;
+    //amount ordered
+    private int amountOrdered;
     //image
     private int imageDrawableID;
 
-    public FoodItem(String foodName, String price, String content) {
-//        this.foodID = foodID;
+    public FoodItem(int foodID, String foodName, String price, String content, int amountOrdered, int imageDrawableID) {
+        this.foodID = foodID;
         this.foodName = foodName;
         this.price = price;
         this.content = content;
+        this.amountOrdered = amountOrdered;
+        this.imageDrawableID = imageDrawableID;
     }
 
     public String getContent() {
@@ -36,6 +40,9 @@ public class FoodItem {
         this.price = price;
     }
 
+    public int getAmountOrdered() { return amountOrdered; }
+
+    public void setAmountOrdered(int amountOrdered) { this.amountOrdered = amountOrdered; }
 
     public int getImageDrawableID() {
         return imageDrawableID;
@@ -45,13 +52,13 @@ public class FoodItem {
         this.imageDrawableID = imageDrawableID;
     }
 
-//    public int getFoodID() {
-//        return foodID;
-//    }
-//
-//    public void setFoodID(int foodID) {
-//        this.foodID = foodID;
-//    }
+    public int getFoodID() {
+        return foodID;
+    }
+
+    public void setFoodID(int foodID) {
+        this.foodID = foodID;
+    }
 
     public String getFoodName() {
         return foodName;
